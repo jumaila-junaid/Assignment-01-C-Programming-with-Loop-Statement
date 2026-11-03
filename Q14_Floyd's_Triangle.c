@@ -6,10 +6,10 @@ int main() {
     printf("Enter the number of rows: ");
     scanf("%d", &rows);
 
-    for (i = 1; i <= rows; ++i) {
-        for (j = 1; j <= i && j <= 3; ++j) {
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i && j <= 3; j++) {
             printf("%d ", number);
-            ++number;
+            number++;
         }
         printf("\n");
     }
