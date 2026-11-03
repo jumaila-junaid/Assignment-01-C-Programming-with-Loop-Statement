@@ -8,21 +8,27 @@ int main() {
 
     for (i = 1; i <= rows; ++i) {
 
-        // Spaces
+        // 1. Print left side spaces
         for (j = i; j < rows; ++j) {
             printf(" ");
         }
 
-        // Increasing numbers
+        // 2. Print increasing numbers
         for (j = 1; j <= i; ++j) {
-            printf("%d", i + j - 1);
+            printf("%d", (i + j - 2) % 9 + 1);
         }
 
-        // Decreasing numbers
+        // 3. Print decreasing numbers
         for (j = i - 1; j >= 1; --j) {
-            printf("%d", i + j - 1);
+            printf("%d", (i + j - 2) % 9 + 1);
         }
 
+        // 4. Print right side spaces
+        for (j = i; j < rows; ++j) {
+            printf(" ");
+        }
+
+        // Move to the next line
         printf("\n");
     }
 
