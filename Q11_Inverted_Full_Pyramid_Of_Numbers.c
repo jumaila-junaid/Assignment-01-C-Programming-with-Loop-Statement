@@ -6,23 +6,30 @@ int main() {
     printf("Enter the number of rows: ");
     scanf("%d", &rows);
 
+    // Loop starts from 'rows' and decreases down to 1
     for (i = rows; i >= 1; --i) {
 
-        // Spaces
-        for (j = rows; j > i; --j) {
+        // 1. Print left side spaces
+        for (j = i; j < rows; ++j) {
             printf(" ");
         }
 
-        // Increasing numbers
+        // 2. Print increasing numbers
         for (j = 1; j <= i; ++j) {
-            printf("%d", i + j - 1);
+            printf("%d", (i + j - 2) % 9 + 1);
         }
 
-        // Decreasing numbers
+        // 3. Print decreasing numbers
         for (j = i - 1; j >= 1; --j) {
-            printf("%d", i + j - 1);
+            printf("%d", (i + j - 2) % 9 + 1);
         }
 
+        // 4. Print right side spaces
+        for (j = i; j < rows; ++j) {
+            printf(" ");
+        }
+
+        // Move to the next line
         printf("\n");
     }
 
