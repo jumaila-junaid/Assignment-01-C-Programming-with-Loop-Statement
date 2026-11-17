@@ -6,15 +6,15 @@ int main() {
     printf("Enter the number of rows: ");
     scanf("%d", &rows);
 
-    for (i = rows; i >= 1; --i) {
+    for (i = rows; i >= 1; i--) {
 
         // Print spaces
-        for (j = i; j < rows; ++j) {
+        for (j = i; j < rows; j++) {
             printf(" ");
         }
 
         // Print stars
-        for (j = 1; j <= 2 * i - 1; ++j) {
+        for (j = 1; j <= 2 * i - 1; j++) {
             printf("*");
         }
 
